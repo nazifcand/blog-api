@@ -2,12 +2,14 @@ import express from 'express';
 import http from 'http';
 import initializeMiddlewares from './middlewares.js';
 import initializeRoutes from './routes.js';
+import startDB from './helpers/database.js';
 
 const port = process.env.PORT || '3000';
 const app = express();
 const server = http.createServer(app);
-
 app.set('port', port);
+
+startDB();
 
 /* Initialize */
 initializeMiddlewares(app);

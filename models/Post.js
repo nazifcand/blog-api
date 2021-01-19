@@ -9,7 +9,7 @@ const postSchema = new Schema({
   tags: [String],
   description: String,
   type: { type: String, default: 'post' }, // post || page
-  thumbnail: { type: String, default: '/uploads/post-default-thumbnail.jpg' },
+  thumbnail: { type: String, default: '/uploads/default-post-thumbnail.jpg' },
   createAt: { type: Boolean, default: Date.now },
   updateAt: { type: Boolean, default: Date.now },
 });

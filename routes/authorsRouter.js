@@ -2,7 +2,7 @@ import { Router } from 'express';
 const router = Router();
 
 /* Controllers */
-import authorController from '../controllers/authors/index.js';
+import authorController from '../controllers/authorController.js';
 
 /* Routes */
 

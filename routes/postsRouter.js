@@ -2,8 +2,8 @@ import { Router } from 'express';
 const router = Router();
 
 /* Controllers */
-import postController from '../controllers/posts/index.js';
-import commentController from '../controllers/comments/index.js';
+import postController from '../controllers/postController.js';
+import commentController from '../controllers/commentController.js';
 
 /* Routes */
 

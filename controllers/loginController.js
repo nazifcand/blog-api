@@ -15,6 +15,9 @@ export default async (req, res, next) => {
   /* Check user */
   const user = await User.findOne(req.body).then(result => result).catch(err => next({ statusCode: 500, message: 'error', errors: err }));
 
+  /* User not found */
+  if (!user) return next({ statusCode: 404, message: 'Kullanıcı bulunamadı!' });
+
   /* Generate token */
   const token = jwt.sign({ id: user._id }, 'SECRETKET', { expiresIn: "2h" });
 

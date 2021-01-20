@@ -25,7 +25,14 @@ router.post('/',
   check('username')
     .trim()
     .isLength({ min: 3 })
-    .withMessage('Kullanıcı adı alanı 3 karakterden küçük olamaz!'),
+    .withMessage('Kullanıcı adı alanı 3 karakterden küçük olamaz!')
+    .custom(value => {
+      return User.findOne({ username: value }).then(result => {
+        if (result) {
+          return Promise.reject('Bu kullanıcı adı daha önceden alınmış!');
+        }
+      });
+    }),
 
   /* Validation description */
   check('description')
@@ -39,8 +46,8 @@ router.post('/',
     .trim()
     .exists()
     .withMessage()
-    .isEmail().
-    custom(value => {
+    .isEmail()
+    .custom(value => {
       return User.findOne({ mail: value }).then(result => {
         if (result) {
           return Promise.reject('Böyle bir e-posta kayıtlı!');

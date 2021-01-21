@@ -8,10 +8,10 @@
 | :heavy_check_mark: | /api/register                 | `POST`   | Register                         |
 | :x:                |
 | :heavy_check_mark: | /api/posts                    | `GET`    | List all posts                   |
-| :x:                | /api/posts/:slug              | `GET`    | Get a post                       |
+| :heavy_check_mark: | /api/posts/:slug              | `GET`    | Get a post                       |
 | :x:                | /api/posts/                   | `POST`   | Create a new post                |
 | :x:                | /api/posts/:slug              | `PUT`    | Update a post with new info.     |
-| :x:                | /api/posts/:slug              | `DELETE` | Delete a post                    |
+| :heavy_check_mark: | /api/posts/:slug              | `DELETE` | Delete a post                    |
 | :x:                |
 | :x:                | /api/posts/:slug/comments     | `GET`    | List all comments                |
 | :x:                | /api/posts/:slug/comments/:id | `GET`    | Get a comment                    |

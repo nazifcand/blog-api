@@ -1,3 +1,5 @@
+import authenticateJWT from '../helpers/authenticateJWT.js';
+import authenticatePermission from '../helpers/authenticatePermission.js';
 import { Router } from 'express';
 const router = Router();
 
@@ -12,11 +14,11 @@ router.get('/', postController.listAll);
 /* Get a post */
 router.get('/:slug', postController.getPost);
 /* Create a new post */
-router.post('/', postController.createPost);
+router.post('/', authenticateJWT, authenticatePermission.checkCreate, postController.createPost);
 /* update post */
-router.put('/:slug', postController.updatePost);
+router.put('/:slug', authenticateJWT, authenticatePermission.checkUpdate, postController.updatePost);
 /* Delete a post */
-router.delete('/:slug', postController.deletePost);
+router.delete('/:slug', authenticateJWT, authenticatePermission.checkDelete, postController.deletePost);
 
 
 /* List all comments */

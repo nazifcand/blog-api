@@ -35,4 +35,4 @@
 | :heavy_check_mark: | /api/categories/:slug         | `GET`    | Get a category                   |
 | :heavy_check_mark: | /api/categories/              | `POST`   | Create a new category            |
 | :x:                | /api/categories/:slug         | `PUT`    | Update a category with new info. |
-| :x:                | /api/categories/:slug         | `DELETE` | Delete a category                |
+| :heavy_check_mark: | /api/categories/:slug         | `DELETE` | Delete a category                |

@@ -4,7 +4,7 @@ import authenticatePermission from '../helpers/authenticatePermission.js';
 const router = Router();
 
 /* Validators */
-import createCategoryValidator from '../validators/createCategoryValidator.js';
+import categoryValidator from '../validators/categoryValidator.js';
 
 /* Controllers */
 import categoryController from '../controllers/categoryController.js';
@@ -28,7 +28,7 @@ router.post(
   '/',
   authenticateJWT,
   authenticatePermission.checkCreate,
-  createCategoryValidator,
+  categoryValidator,
   categoryController.createCategory
 );
 
@@ -37,6 +37,7 @@ router.put(
   '/:slug',
   authenticateJWT,
   authenticatePermission.checkUpdate,
+  categoryValidator,
   categoryController.updateCategory
 );
 

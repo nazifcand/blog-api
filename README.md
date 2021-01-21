@@ -20,9 +20,8 @@
 | :x:                | /api/posts/:slug/comments/:id | `PUT`    | Update a comment with new info.  |
 | :x:                | /api/posts/:slug/comments/:id | `DELETE` | Delete a comment                 |
 | :x:                |
-| :x:                | /api/authors                  | `GET`    | List all authors                 |
+| :heavy_check_mark: | /api/authors                  | `GET`    | List all authors                 |
 | :x:                | /api/authors/:slug            | `GET`    | Get a author                     |
-| :x:                | /api/authors/                 | `POST`   | Create a new author              |
 | :x:                | /api/authors/:slug            | `PUT`    | Update a author with new info.   |
 | :x:                | /api/authors/:slug            | `DELETE` | Delete a author                  |
 | :x:                |                               |

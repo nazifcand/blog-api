@@ -10,8 +10,6 @@ import authorController from '../controllers/authorController.js';
 router.get('/', authorController.listAll);
 /* Get a author */
 router.get('/:slug', authorController.getAuthor);
-/* Create a new author */
-router.post('/', authorController.createAuthor);
 /* update author */
 router.put('/:slug', authorController.updateAuthor);
 /* Delete a author */

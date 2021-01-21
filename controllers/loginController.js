@@ -19,7 +19,7 @@ export default async (req, res, next) => {
   if (!user) return next({ statusCode: 404, message: 'Kullanıcı bulunamadı!' });
 
   /* Generate token */
-  const token = jwt.sign({ id: user._id }, 'SECRETKET', { expiresIn: "2h" });
+  const token = jwt.sign({ id: user._id }, 'SECRETKEY', { expiresIn: "2h" });
 
   return res.send({ statusCode: 200, message: 'OK', token });
 }

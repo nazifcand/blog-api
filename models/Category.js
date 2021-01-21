@@ -6,8 +6,8 @@ const categorySchema = new Schema({
   slug: String,
   description: String,
   status: { type: Boolean, default: false },
-  createAt: { type: Boolean, default: Date.now },
-  updateAt: { type: Boolean, default: Date.now },
+  createAt: { type: Date, default: Date.now },
+  updateAt: { type: Date, default: Date.now },
 });
 
 export default model('Category', categorySchema, 'categories');

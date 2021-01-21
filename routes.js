@@ -1,7 +1,6 @@
 import indexRouter from './routes/indexRouter.js';
 import loginRouter from './routes/loginRouter.js';
 import registerRouter from './routes/registerRouter.js';
-import subscribeRouter from './routes/subscribeRouter.js';
 import postsRouter from './routes/postsRouter.js';
 import authorsRouter from './routes/authorsRouter.js';
 import pagesRouter from './routes/pagesRouter.js';
@@ -13,7 +12,6 @@ export default app => {
 
   app.use('/api/login', loginRouter);
   app.use('/api/register', registerRouter);
-  app.use('/api/subscribe', subscribeRouter);
 
   app.use('/api/posts', postsRouter);
   app.use('/api/authors', authorsRouter);

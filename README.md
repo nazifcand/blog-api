@@ -6,7 +6,6 @@
 | ------------------ | ----------------------------- | -------- | -------------------------------- |
 | :heavy_check_mark: | /api/login                    | `POST`   | Login                            |
 | :heavy_check_mark: | /api/register                 | `POST`   | Register                         |
-| :x:                | /api/subscribe                | `POST`   | Subscribe                        |
 | :x:                |
 | :x:                | /api/posts                    | `GET`    | List all posts                   |
 | :x:                | /api/posts/:slug              | `GET`    | Get a post                       |

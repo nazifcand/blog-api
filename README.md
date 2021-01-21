@@ -21,7 +21,8 @@
 | :x:                | /api/posts/:slug/comments/:id | `DELETE` | Delete a comment                 |
 | :x:                |
 | :heavy_check_mark: | /api/authors                  | `GET`    | List all authors                 |
-| :x:                | /api/authors/:slug            | `GET`    | Get a author                     |
+| :heavy_check_mark: | /api/authors/:slug            | `GET`    | Get a author                     |
+| :x:                | /api/authors/:slug/posts      | `GET`    | Bring the author's posts         |
 | :x:                | /api/authors/:slug            | `PUT`    | Update a author with new info.   |
 | :x:                | /api/authors/:slug            | `DELETE` | Delete a author                  |
 | :x:                |                               |

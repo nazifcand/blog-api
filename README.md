@@ -7,7 +7,7 @@
 | :heavy_check_mark: | /api/login                    | `POST`   | Login                            |
 | :heavy_check_mark: | /api/register                 | `POST`   | Register                         |
 | :x:                |
-| :x:                | /api/posts                    | `GET`    | List all posts                   |
+| :heavy_check_mark: | /api/posts                    | `GET`    | List all posts                   |
 | :x:                | /api/posts/:slug              | `GET`    | Get a post                       |
 | :x:                | /api/posts/                   | `POST`   | Create a new post                |
 | :x:                | /api/posts/:slug              | `PUT`    | Update a post with new info.     |
@@ -21,7 +21,6 @@
 | :x:                |
 | :heavy_check_mark: | /api/authors                  | `GET`    | List all authors                 |
 | :heavy_check_mark: | /api/authors/:slug            | `GET`    | Get a author                     |
-| :x:                | /api/authors/:slug/posts      | `GET`    | Bring the author's posts         |
 | :x:                | /api/authors/:slug            | `PUT`    | Update a author with new info.   |
 | :x:                | /api/authors/:slug            | `DELETE` | Delete a author                  |
 | :x:                |                               |

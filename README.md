@@ -31,8 +31,8 @@
 | :x:                | /api/pages/:slug              | `PUT`    | Update a page with new info.     |
 | :x:                | /api/pages/:slug              | `DELETE` | Delete a page                    |
 | :x:                |
-| :x:                | /api/categories               | `GET`    | List all categories              |
+| :heavy_check_mark: | /api/categories               | `GET`    | List all categories              |
 | :x:                | /api/categories/:slug         | `GET`    | Get a category                   |
-| :x:                | /api/categories/              | `POST`   | Create a new category            |
+| :heavy_check_mark: | /api/categories/              | `POST`   | Create a new category            |
 | :x:                | /api/categories/:slug         | `PUT`    | Update a category with new info. |
 | :x:                | /api/categories/:slug         | `DELETE` | Delete a category                |

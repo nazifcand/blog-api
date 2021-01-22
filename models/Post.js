@@ -10,8 +10,8 @@ const postSchema = new Schema({
   description: String,
   type: { type: String, default: 'post' }, // post || page
   thumbnail: { type: String, default: '/uploads/default-post-thumbnail.jpg' },
-  createAt: { type: Boolean, default: Date.now },
-  updateAt: { type: Boolean, default: Date.now },
+  createAt: { type: Date, default: Date.now },
+  updateAt: { type: Date, default: Date.now },
 });
 
 export default model('Post', postSchema, 'posts');

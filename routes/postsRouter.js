@@ -1,7 +1,11 @@
 import authenticateJWT from '../helpers/authenticateJWT.js';
 import authenticatePermission from '../helpers/authenticatePermission.js';
+import uploadHelper from '../helpers/uploadHelper.js';
 import { Router } from 'express';
 const router = Router();
+
+/* Validators */
+import postValidator from '../validators/postValidator.js';
 
 /* Controllers */
 import postController from '../controllers/postController.js';
@@ -10,15 +14,42 @@ import commentController from '../controllers/commentController.js';
 /* Routes */
 
 /* List all posts */
-router.get('/', postController.listAll);
+router.get(
+  '/',
+  postController.listAll
+);
+
 /* Get a post */
-router.get('/:slug', postController.getPost);
+router.get(
+  '/:slug',
+  postController.getPost
+);
+
 /* Create a new post */
-router.post('/', authenticateJWT, authenticatePermission.checkCreate, postController.createPost);
+router.post(
+  '/',
+  authenticateJWT,
+  authenticatePermission.checkCreate,
+  postValidator,
+  uploadHelper.single('thumbnail'),
+  postController.createPost
+);
+
 /* update post */
-router.put('/:slug', authenticateJWT, authenticatePermission.checkUpdate, postController.updatePost);
+router.put(
+  '/:slug',
+  authenticateJWT,
+  authenticatePermission.checkUpdate,
+  postController.updatePost
+);
+
 /* Delete a post */
-router.delete('/:slug', authenticateJWT, authenticatePermission.checkDelete, postController.deletePost);
+router.delete(
+  '/:slug',
+  authenticateJWT,
+  authenticatePermission.checkDelete,
+  postController.deletePost
+);
 
 
 /* List all comments */

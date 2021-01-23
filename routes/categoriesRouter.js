@@ -28,7 +28,7 @@ router.post(
   '/',
   authenticateJWT,
   authenticatePermission.checkCreate,
-  categoryValidator,
+  categoryValidator.createValidate,
   categoryController.createCategory
 );
 
@@ -37,7 +37,7 @@ router.put(
   '/:slug',
   authenticateJWT,
   authenticatePermission.checkUpdate,
-  categoryValidator,
+  categoryValidator.updateValidate,
   categoryController.updateCategory
 );
 

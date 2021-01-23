@@ -30,7 +30,7 @@ router.post(
   '/',
   authenticateJWT,
   authenticatePermission.checkCreate,
-  postValidator,
+  postValidator.createValidate,
   uploadHelper.single('thumbnail'),
   postController.createPost
 );
@@ -40,6 +40,8 @@ router.put(
   '/:slug',
   authenticateJWT,
   authenticatePermission.checkUpdate,
+  postValidator.updateValidate,
+  uploadHelper.single('thumbnail'),
   postController.updatePost
 );
 

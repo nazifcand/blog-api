@@ -10,7 +10,7 @@
 | :heavy_check_mark: | /api/posts                    | `GET`    | List all posts                   |
 | :heavy_check_mark: | /api/posts/:slug              | `GET`    | Get a post                       |
 | :heavy_check_mark: | /api/posts/                   | `POST`   | Create a new post                |
-| :x:                | /api/posts/:slug              | `PUT`    | Update a post with new info.     |
+| :heavy_check_mark: | /api/posts/:slug              | `PUT`    | Update a post with new info.     |
 | :heavy_check_mark: | /api/posts/:slug              | `DELETE` | Delete a post                    |
 | :x:                |
 | :x:                | /api/posts/:slug/comments     | `GET`    | List all comments                |

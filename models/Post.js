@@ -8,6 +8,7 @@ const postSchema = new Schema({
   category: Types.ObjectId,
   tags: [String],
   description: String,
+  status: { type: Boolean, default: true },
   type: { type: String, default: 'post' }, // post || page
   thumbnail: { type: String, default: '/uploads/default-post-thumbnail.jpg' },
   createAt: { type: Date, default: Date.now },

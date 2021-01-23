@@ -1,17 +1,16 @@
 import Post from '../../models/Post.js';
 import slugify from '../../helpers/slugify.js';
 import { validationResult } from 'express-validator';
-import { unlinkSync } from 'fs';
+import removeImage from '../../helpers/removeImage.js';
 
 export default async (req, res, next) => {
 
   /* Errors */
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    try {
-      /* Delete image */
-      unlinkSync(req.file.path);
-    } catch (err) { }
+
+    /* Delete image */
+    removeImage(`/public/uploads/${req.file.filename}`);
 
     return next({ statusCode: 401, message: 'error', errors: errors.array() })
   }
